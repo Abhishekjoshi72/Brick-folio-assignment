@@ -1,0 +1,77 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="discountPercentage">
+      <th mat-header-cell *matHeaderCellDef> Discount Percentage </th>
+      <td mat-cell *matCellDef="let element"> {{element.discountPercentage}} </td>
+    </ng-container>
+  
+     <!-- Ratng Column -->
+     <ng-container matColumnDef="rating">
+      <th mat-header-cell *matHeaderCellDef> Rating </th>
+      <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+    </ng-container>
+  
+    <!-- Stock Column -->
+    <ng-container matColumnDef="stock">
+      <th mat-header-cell *matHeaderCellDef> Stock </th>
+      <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+    </ng-container>
+  
+    <!-- Brand Column -->
+    <ng-container matColumnDef="brand">
+      <th mat-header-cell *matHeaderCellDef> Brand </th>
+      <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+    </ng-container>
+  
+    <!-- Category Column -->
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef> Category </th>
+      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+
+    
+    <!-- <ng-container matColumnDef="thumbnail">
+        <th mat-header-cell *matHeaderCellDef> Thumbnil </th>
+        <td mat-cell *matCellDef="let element"> 
+            <img [src]="element.thumbnail"/> 
+        </td>
+      </ng-container> -->
+
+      <!-- Category Column -->
+     <!-- <ng-container matColumnDef="images">
+        <th mat-header-cell *matHeaderCellDef> Images </th>
+        <td mat-cell *matCellDef="let item">
+
+          <div class="image-container">
+            <img *ngFor="let image of item.images" [src]="image" class="image-item" />
+          </div>
+        </td>
+      </ng-container> -->
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button color="primary" (click)="viewProduct(element)">View</button>
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

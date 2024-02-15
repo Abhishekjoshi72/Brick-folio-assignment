@@ -1,0 +1,30 @@
+<!-- <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel *ngFor="let row of categoriesValue" #matExpansionPanel1>
+        <mat-expansion-panel-header (click)="expandPanel(matExpansionPanel1, $event, row)">
+            <div class="my-panel">
+                <h3>{{row}}</h3>
+            </div>
+        </mat-expansion-panel-header>
+
+        <div class="" >
+            <app-product-tables *ngIf="isCategoryShow" [data]="categoryData"></app-product-tables>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion> -->
+
+
+<mat-accordion multi>
+    <mat-expansion-panel *ngFor="let row of categoriesValue; let i = index" #matExpansionPanel1>
+        <mat-expansion-panel-header (click)="expandPanel(matExpansionPanel1, $event, row)" (expandedChange)="onPanelExpanded($event, i)">
+            <div class="my-panel">
+                <h3>{{row}}</h3>
+                <!-- Additional elements or styling can be added here -->
+            </div>
+        </mat-expansion-panel-header>
+
+        <div class="" >
+            <app-product-tables *ngIf="i === expandedIndex && isCategoryShow" [data]="categoryData"></app-product-tables>
+            <!-- Adjusted ngIf condition and added index comparison -->
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

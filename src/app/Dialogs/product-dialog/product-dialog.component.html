@@ -1,0 +1,110 @@
+<mat-card>
+    <h2 mat-dialog-title>View Product</h2>
+    <mat-dialog-content class="mat-typography">
+        <mat-grid-list cols="1">
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Title</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{data.title}}</p>
+                </div>
+            </div>
+
+            <div class=" row content">
+                <div class="col-5">
+                    <h3>Description</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{data.description}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Price</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.price}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Discount Percentage</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.discountPercentage}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Rating</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.rating}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Rating</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.rating}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Stock</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.stock}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Brand</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.brand}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Category</h3>
+                </div>
+                <div class="col-5">
+                    <p>{{ data.category}}</p>
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Thumbnil</h3>
+                </div>
+                <div class="col-5">
+                    <img src="{{data.thumbnail}}" alt="" width="200" height="200" />
+                </div>
+            </div>
+
+            <div class="content row">
+                <div class="col-5">
+                    <h3>Images</h3>
+                </div>
+                <div class="col-5">
+                    <div class="image-container">
+                        <mat-card *ngFor="let image of data.images" class="image-item">
+                            <img [src]="image" class="image-item" />
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </mat-grid-list>
+    </mat-dialog-content>
+</mat-card>

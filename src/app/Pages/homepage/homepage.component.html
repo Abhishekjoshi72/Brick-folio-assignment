@@ -1,0 +1,20 @@
+<div class="toolbar">
+    <mat-toolbar>
+        <span>Brickfolio Application</span>
+    </mat-toolbar>
+</div>
+
+<div class="tabs">
+    <mat-tab-group>
+        <mat-tab label="Products">
+          <ng-template matTabContent>
+           <app-products></app-products>
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Categories">
+          <ng-template matTabContent>
+           <app-categories></app-categories>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+</div>
