@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-category-dialog',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
+  imports: [],
   templateUrl: './category-dialog.component.html',
   styleUrl: './category-dialog.component.css'
 })

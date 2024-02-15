@@ -37,7 +37,6 @@ export class ProductsComponent implements  OnInit {
   ngOnInit(){
     this.productserice.getProduct().subscribe((res)=>{
       this.productData = res.products;
-      console.log('PRODUCTS COMPONENT:',this.productData);
       // this.dataSource = new MatTableDataSource(res.products);
     })
   }

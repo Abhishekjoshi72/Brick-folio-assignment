@@ -44,7 +44,6 @@ export class ProductTablesComponent implements OnInit,OnChanges {
   displayedColumns: string[] = ['title', 'description', 'price', 'discountPercentage', 'rating', 'stock','brand','category','action'];
 
   ngOnInit(): void {
-   // console.log(this.data)
    this.dataSource = new MatTableDataSource(this.data);
   }
 

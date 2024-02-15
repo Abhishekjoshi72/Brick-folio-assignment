@@ -62,15 +62,6 @@ export class CategoriesComponent implements OnInit {
     })
   }
 
-  // onEdit(data:any){
-
-  //   this.categoriesService.getProductCategoryName(data).subscribe((value)=> {
-  //     // console.log("Category name Response: ", value.products);
-  //     // this.dataSource = new MatTableDataSource(value.products);
-  //     this.categoryData = value.products;
-  //     this.isCategoryShow = true;
-  //   });
-  // }
 
   onEdit(data: any): Promise<void> {
     return new Promise<void>((resolve, reject) => {
@@ -108,7 +99,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   onPanelExpanded(expanded: any, row: any) {
-    // If the panel is being expanded, set the expanded category
+
     if (expanded) {
         this.expandedCategory = row;
     }
