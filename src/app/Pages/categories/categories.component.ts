@@ -10,10 +10,6 @@ import {MatAccordion, MatExpansionModule, MatExpansionPanel} from '@angular/mate
 import { CommonModule } from '@angular/common';
 import { ProductTablesComponent } from '../product-tables/product-tables.component';
 
-// export interface CategoryData {
-//   name: string;
-// }
-
 export interface CategoryData {
   id: number;
   title: string;
@@ -47,8 +43,7 @@ export class CategoriesComponent implements OnInit {
   displayedColumns: string[] = ['title', 'description', 'price', 'discountPercentage', 'rating', 'stock','brand','category'];
   expandedCategory: any;
   expandedIndex: any;
-  // displayedColumns: string[] = ['name','action'];
-
+  
   constructor(
     private categoriesService: ProductService,
     public dialog: MatDialog,
